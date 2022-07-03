@@ -8,7 +8,6 @@ import { MainMenue } from '../MainMenue/MainMenue';
 function App() {
   return (
     <Container>
-      <MainMenue></MainMenue>
       <FontAwesomeIcon icon = {faHouse}/> Home
 
       <FontAwesomeIcon icon = {faUpload}/> Upload
