@@ -1,5 +1,8 @@
 import React from "react";
 import { Container, Nav } from "react-bootstrap";
+import {HashRouter} from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 
 export class MainMenueItem{
     text: string='';
@@ -48,18 +51,19 @@ export class MainMenue extends React.Component<MainMenueProperties>{
         return (
             <Container>
             <Nav variant = "tabs">
+                <HashRouter>
                 {this.state.items.map(this.makeNavLink)}
-
-        </Nav>
+                </HashRouter>
+                        </Nav>
         </Container>
         );
         
     }
     private makeNavLink(item: MainMenueItem){
         return(
-            <Nav.Link href= {item.link}>
+            <Link reloadDocument to= {item.link} className = "nav-link">
                 {item.text}
-            </Nav.Link>
+            </Link>
             );
 
     }
