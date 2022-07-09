@@ -13,6 +13,7 @@ import HomePage from './components/HomePage/HomePage';
 import ContactPage from './components/ContactPAge/ContactPage';
 import UserLoginPage from './components/UserLoginPage/UserLoginPage';
 import CategoryPage from './components/CategoryPage/CategoryPage';
+import { BrowserRouter } from 'react-router-dom';
 
 const menueItems = [
   new MainMenueItem("Home", "/"),
@@ -34,7 +35,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <MainMenue items = {menueItems}></MainMenue>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         
         <Route  path = "/" element = {<HomePage/>}/>
@@ -47,7 +48,7 @@ root.render(
         }} />}/>
 
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

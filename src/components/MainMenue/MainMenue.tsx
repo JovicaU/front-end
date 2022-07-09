@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Nav } from "react-bootstrap";
-import {HashRouter} from 'react-router-dom';
+import {HashRouter, BrowserRouter} from 'react-router-dom';
 import { Link } from "react-router-dom";
 
 
@@ -51,9 +51,9 @@ export class MainMenue extends React.Component<MainMenueProperties>{
         return (
             <Container>
             <Nav variant = "tabs">
-                <HashRouter>
+                <BrowserRouter>
                 {this.state.items.map(this.makeNavLink)}
-                </HashRouter>
+                </BrowserRouter>
                         </Nav>
         </Container>
         );
